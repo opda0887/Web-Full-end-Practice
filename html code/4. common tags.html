@@ -11,6 +11,23 @@
 		<base target="_blank">
 		<!-- 對所有 a tag 使其在新頁面開啟連結 -->
 
+		<!-- 
+			下面是進階的css部分
+		-->
+
+		<style>
+
+			table, td, th {
+				border-collapse: collapse;
+				border: 1px solid black;
+			}
+
+			th, td {
+				padding: 0.25rem;
+			}
+
+		</style>
+
     <title>Document</title>
 </head>
 <body>
@@ -59,6 +76,39 @@
 		<li>John</li>
 		<li>May</li>
 	</ul>
+
+	<h2>
+		Their datas
+	</h2>
+	<table>
+
+		<thead>
+			<tr>
+				<th colspan="3">My students data</th>
+			</tr>
+	
+			<tr>
+				<th>Country</th>
+				<th>Age</th>
+				<th>hobby</th>
+			</tr>
+		</thead>
+		
+		<tbody>
+			<tr>
+				<td>Taiwan</td>
+				<td>18</td>
+				<td>Playing tennis</td>
+			</tr>
+	
+			<tr>
+				<td>China</td>
+				<td>16</td>
+				<td>reading</td>
+			</tr>
+		</tbody>
+		
+	</table>
 
 </body>
 </html>
