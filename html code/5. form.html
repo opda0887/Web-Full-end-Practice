@@ -11,19 +11,35 @@
 <body>
   <form action="" method="">
     <label for="username">Your name</label>
-    <input id="username" type="text" name="UN">
-    <br>
+    <input id="username" type="text" name="UN" placeholder="Enter your real name" required>
+      <br>
+    <label for="email">Email address</label>
+    <input id="email" type="email" name="email" required>
+      <br>
+    <label for="num">Your age</label>
+    <input id="num" type="number" name="age" min="0" max="150" step="1" required>
+      <br>
     <input id="checkbox" type="checkbox" name="adult" value="true">
     <label for="checkbox">Already 18 ?</label>
-    <br>
+      <br>
     <input type="checkbox" checked>
-    <br>
+      <br>
+    <input type="file" name="file">
+      <br>
+    <input id="male" type="radio" name="gender" value="male" required>
+      <label for="male">Male</label>
+    <input id="female" type="radio" name="gender" value="female">
+      <label for="female">Female</label>
+    <input id="other" type="radio" name="gender" value="other">
+      <label for="other">Other</label>
+      <br>
     <button type="submit">
       Push your data
     </button>
   </form>
 
   <form action="" method="POST">
+    <br>
     <label for="account">Input your account</label>
     <input id="account" type="text" name="Acc">
 
@@ -32,6 +48,21 @@
 
     <button type="submit">Push your data</button>
   </form>
+
+  <form action="">
+    <br>
+    <label for="password">Your password</label>
+    <input id="password" type="password" name="password">
+  </form>
+
+  <form action="">
+    <br>
+    <label for="score">Student's scores</label>
+    <br>
+    0<input id="score" type="range" name="score" min="0" max="100" step="1">100
+  </form>
+
+
 </body>
 </html>
 
