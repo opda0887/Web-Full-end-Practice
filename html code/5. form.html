@@ -27,11 +27,29 @@
     <input type="file" name="file">
       <br>
     <input id="male" type="radio" name="gender" value="male" required>
-      <label for="male">Male</label>
+    <label for="male">Male</label>
     <input id="female" type="radio" name="gender" value="female">
-      <label for="female">Female</label>
+    <label for="female">Female</label>
     <input id="other" type="radio" name="gender" value="other">
-      <label for="other">Other</label>
+    <label for="other">Other</label>
+      <br>
+    <label for="theHand">Your prefer hand</label>
+    <select name="hand" id="theHand" required>
+      <option></option>
+      <option value="Right">Right hand</option>
+      <option value="Left">Left hand</option>
+    </select>
+      <br>
+    <label for="area">Where you come from</label>
+    <input id="area" type="text" name="area" list="areaChoice">
+    <datalist id="areaChoice">
+      <option value="Taipei">Taipei City</option>
+      <option value="Taina">Taina City</option>
+    </datalist>
+      <br>
+    <label for="sug">Enter your suggestion: </label>
+    <br>
+    <textarea id="sug" name="suggestion" cols="30" rows="10" placeholder="type your text here"></textarea>
       <br>
     <button type="submit">
       Push your data
