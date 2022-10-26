@@ -4,9 +4,13 @@
 
 # 📙 我做的相關筆記(Notes)
 
-### html intro
+### HTML intro
 
 https://grey-sailor-b4c.notion.site/HTML-intro-21daadf174e64537a82044f35f6211e1
+
+### CSS intro
+
+https://grey-sailor-b4c.notion.site/CSS-intro-5dfeda374fb94594988b8c5a4ff1c7c9
 
 ### 相關查詢資源
 
