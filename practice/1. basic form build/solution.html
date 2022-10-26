@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="opda0887 (Kiwi-Lin)">
+
+    <style>
+      table, td, th {
+        border-collapse: collapse;
+        border: 1px solid black;
+      }
+
+      th, td {
+        padding: 0.25rem;
+      }
+    </style>
+
+    <title>Breakfast form</title>
+  </head>
+
+  <body>
+
+    <table>
+      <tr>
+        <th colspan="3">源源早餐店菜單</th>
+      </tr>
+      <tr>
+        <td>鐵板麵</td>
+        <td>50元</td>
+        <td>1份</td>
+      </tr>
+      <tr>
+        <td>三明治</td>
+        <td>25元</td>
+        <td>1份</td>
+      </tr>
+      <tr>
+        <td>薯條</td>
+        <td>30元</td>
+        <td>2份</td>
+      </tr>
+    </table>
+
+    <form action="">  
+      <label for="name">姓名</label>
+      <input id="name" type="text" name="username" placeholder="請輸入真實姓名" required>
+        <br>
+      <label for="gender">性別</label>
+      <select name="gender" id="gender" required>
+        <option value=""></option>
+        <option value="male">男性</option>
+        <option value="female">女性</option>
+        <option value="other">其他</option>
+      </select>
+        <br>
+      <label for="mail">信箱</label>
+      <input id="mail" type="email" name="email" required>
+        <br>
+      <input id="yearcheck" type="checkbox" name="yearCheck" value="true">
+      <label for="yearcheck">是否滿十歲？</label>
+        <br>
+      <label for="product">購買：</label>
+      <br>
+      <input id="noodle" type="radio" name="breakfast" value="noodle" required>
+      <label for="noodle">鐵板麵</label>
+      <br>
+      <input id="sandwitch" type="radio" name="breakfast" value="sandwitch">
+      <label for="sandwitch">三明治</label>
+      <br>
+      <input id="fries" type="radio" name="breakfast" value="fries">
+      <label for="fries">薯條</label>
+        <br>
+      <label for="num">幾份</label>
+      <input id="num" type="number" name="howMany" placeholder="輸入整數即可" required>
+        <br>
+      <label for="area">住處</label>
+      <input id="area" type="text" name="area" list="spot">
+      <datalist id="spot">
+        <option value="台北市">台北</option>
+        <option value="台中市">台中</option>
+        <option value="台南市">台南</option>
+        <option value="高雄市">高雄</option>
+        <option value="台東市">台東</option>
+      </datalist>
+        <br>
+      <label for="come">之前來過餐廳嗎</label>
+      <br>
+      否<input id="come" type="range" name="haveCome" min="0" max="2">是
+        <br>
+      <label for="ps">備註：</label>
+      <br>
+      <textarea name="ps" id="ps" cols="30" rows="10" placeholder="備註內容請輸入在此"></textarea>
+        <br>
+      <button type="submit">送出表單</button>
+    </form>
+  </body>
+</html>
