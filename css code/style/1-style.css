@@ -4,3 +4,9 @@ h1 {
 h2 {
   color: rgb(120, 60, 50);
 }
+h3 {
+  color: rgba(120, 60, 50, 0.5);
+}
+h4 {
+  color: #fdad61;
+}
