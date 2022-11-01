@@ -1,0 +1,17 @@
+/* element selector */
+h1 {
+  color: red;
+}
+
+/* id selector */
+#forThisH2 {
+  color: blue;
+}
+
+/* class selector */
+.greenText {
+  color: green;
+}
+.largeText {
+  font-size: 4rem;
+}
