@@ -1,0 +1,8 @@
+/* descendant selector */
+div.firstBox a {
+  color: aqua;
+}
+
+div.secondBox a {
+  color: greenyellow;
+}

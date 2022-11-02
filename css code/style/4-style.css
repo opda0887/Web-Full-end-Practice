@@ -1,0 +1,4 @@
+/* grouping selector */
+h1 ,h2 ,p {
+  color: red;
+}
