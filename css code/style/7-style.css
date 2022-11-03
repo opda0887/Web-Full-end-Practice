@@ -1,0 +1,4 @@
+/* pseudo class */
+input[type="text"]:focus{
+  color: chartreuse;
+}
