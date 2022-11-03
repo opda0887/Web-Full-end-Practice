@@ -1,0 +1,4 @@
+/* attribute selector */
+input[type="text"] {
+  color: red;
+}
