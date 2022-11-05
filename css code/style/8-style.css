@@ -1,0 +1,19 @@
+/* pseudo element */
+p::before {
+  content: ">>";
+  color: red;
+}
+
+/* p::first-letter {
+  font-size: 2rem;
+} */
+
+h1::after {
+  content: ": ";
+  color: blue;
+}
+
+*::selection {
+  background-color: black;
+  color: white;
+}
