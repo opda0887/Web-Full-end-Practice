@@ -1,0 +1,13 @@
+/* CSS Specificity */
+h1#theRed {
+  color: red;
+}
+
+h1.theBlue {
+  color: blue;
+}
+
+h1 {
+  color: green;
+  display: inline-block;
+}
