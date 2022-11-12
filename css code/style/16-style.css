@@ -1,0 +1,16 @@
+body {
+  background-image: url(../img/nature.jpg);
+  /* background-image 可簡寫為：background */
+
+  background-size: cover;
+  background-position: center;
+
+  color: rgb(198, 71, 158);
+  font-weight: 800;
+}
+
+#title {
+  background-color: blueviolet;
+  /* background-color 可簡寫為：background */
+  color: white;
+}
