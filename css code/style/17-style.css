@@ -1,0 +1,26 @@
+button {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.b1 {
+  padding-top: 1rem;
+  padding-right: 2rem;
+  padding-bottom: 3rem;
+  padding-left: 4rem;
+}
+
+.b2 {
+  /* 四個方向：上、右、下、左 */
+  padding: 1rem 2rem 3rem 4rem;
+}
+
+.b3 {
+  /* 上下、左右 */ 
+  padding: 1rem 3rem
+}
+
+.b4 {
+  /* 上下左右 */ 
+  padding: 2rem;
+}
