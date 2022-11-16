@@ -1,3 +1,11 @@
 .theBorder {
   border: 20px solid red;
 }
+
+.wid_hei {
+  background-color: black;
+  color: whitesmoke;
+
+  width: 50vw;
+  height: 30vh;
+}
