@@ -1,0 +1,17 @@
+.box1 {
+  width: 300px;
+  height: 150px;
+  background: gray;
+}
+.box2 {
+  width: 30%;
+  height: 30%;
+  background-color: aqua;
+}
+
+.box3{
+  width: 40vw;
+  height: 40vh;
+  margin-top: 1rem;
+  background-color: brown;
+}
