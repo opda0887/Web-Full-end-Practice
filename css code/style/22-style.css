@@ -1,0 +1,22 @@
+a {
+  text-decoration: none;
+  color: black;
+  background-color: greenyellow;
+  margin: 1rem;
+}
+
+.a1 {
+  display: block;
+  width: 15vw;
+  height: 10vh;
+}
+
+.a2 {
+  display: inline;
+}
+
+.a3 {
+  display: inline-block;
+  width: 15vw;
+  height: 10vh;
+}
