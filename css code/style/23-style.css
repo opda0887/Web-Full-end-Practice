@@ -1,0 +1,39 @@
+.container {
+  width: 500px;
+  height: 400px;
+  margin-right: 1rem;
+  background: black;
+  display: inline-block;
+}
+
+.box {
+  width: 250px;
+  height: 100px;
+}
+
+.box1 {
+  background: aqua;
+}
+.box2 {
+  background: coral;
+}
+.box3 {
+  background: greenyellow;
+}
+
+.rel1{
+  position: static;
+  z-index: 5;
+}
+.rel2 {
+  position: relative;
+  left: 200px;
+  bottom: 30px;
+  z-index: 3;
+}
+.rel3 {
+  position: relative;
+  left: 100px;
+  bottom: 60px;
+  z-index: 6;
+}
