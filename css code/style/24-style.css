@@ -1,0 +1,34 @@
+body {
+  margin: 0;
+}
+
+.guidebar {
+  position: fixed;
+  background-color: blueviolet;
+  width: 90vw;
+  height: 10vh;
+  top: 3rem;
+  z-index: 100;
+}
+
+.samplebox {
+  background-color: black;
+  width: 50vw;
+  height: 1500px;
+}
+
+.box {
+  width: 50%;
+  height: 200px;
+}
+.box1 {
+  background-color: aqua;
+}
+.box2 {
+  background-color: blanchedalmond;
+  position: sticky;
+  top: 0;
+}
+.box3 {
+  background-color: chartreuse;
+}

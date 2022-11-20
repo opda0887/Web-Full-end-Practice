@@ -37,3 +37,12 @@
   bottom: 60px;
   z-index: 6;
 }
+
+.theRel {
+  position: relative;
+}
+.abs2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
