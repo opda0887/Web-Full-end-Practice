@@ -1,0 +1,10 @@
+/* transition */
+h1 {
+  /* property name, duration, timing function */
+	/* 針對的屬性, 持續時間, 時間的變化(mdn 有很多)*/
+  transition: all 1s ease;
+}
+h1:hover {
+  background-color: darkblue;
+  color: aqua;
+}
