@@ -1,0 +1,57 @@
+div.container {
+  width: 500px;
+  height: 500px;
+  background-color: black;
+  position: relative;
+}
+
+div.box {
+  width: 100px;
+  height: 100px;
+  background-color: aqua;
+  position: absolute;
+  transition: all 1s;
+}
+div.box:hover {
+  transform: translate(100px, 200px);
+}
+
+div.box2 {
+  width: 100px;
+  height: 100px;
+  background-color: greenyellow;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* box2 移動到 container 正中央 */
+  transition: all 1s;
+}
+div.box2:hover {
+  transform: scale(2);
+}
+
+div.box3 {
+  width: 100px;
+  height: 100px;
+  background-color: pink;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transition: all 1s;
+}
+div.box3:hover {
+  transform: rotate(90deg);
+}
+
+div.box4 {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  position: absolute;
+  top: 100px;
+  left: 400px;
+  transition: all 1s;
+}
+div.box4:hover {
+  transform: scale(2);
+}
