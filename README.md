@@ -2,6 +2,8 @@
 
 雖然自己有了製作網頁的基礎 ( Todo web 就是我第一個功能型 web )，不過我發覺自己仍有許多 detials 還沒掌握完全，因此才建了這個 repository，來記錄我再度從 0 開始學習**網頁全端的學習歷程**。我也會寫下一些我學習的筆記，已提供給未來有需要的自己或正在看這 repository 的你們。
 
+Although I have the basis of making web pages (Todo web is my first functional web), I found that I still have a lot of detials that I haven't mastered completely, so I built this repository to record my learning web pages from 0 again The whole learning process. I will also write down some of my learning notes, which I have provided to myself in need in the future or to those who are looking at this repository.
+
 # 📙 我做的相關筆記(Notes)
 
 ### HTML intro

@@ -1,0 +1,7 @@
+img {
+  transition: all 1s;
+}
+img:hover {
+  /* rotateX, rotateY, rotateZ */ 
+  transform: rotateX(90deg);
+}
