@@ -1,0 +1,33 @@
+div.container {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  background-color: black;
+}
+
+div.box {
+  position: absolute;
+  background-color: aqua;
+  width: 100px;
+  height: 100px;
+  animation-name: colorChange;  /* 呼叫名為 colorChange 的 animation */
+  animation-duration: 3s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite; /* 使 animation 在播放無限次 */
+  animation-direction: alternate; /* 使 animation 來回撥放 */
+  animation-timing-function: ease-in;
+  /* animation-fill-mode: forwards; */  /* 使 animation 在撥放結束後停留原地 */
+}
+
+@keyframes colorChange{
+  from {
+    background-color: aqua;
+    top: 0;
+    left: 0;
+  }
+  to {
+    background-color: blueviolet;
+    top: 400px;
+    left: 400px;
+  }
+}
