@@ -1,0 +1,30 @@
+div.container {
+  background-color: black;
+  width: 500px;
+  height: 500px;
+  border-radius: 50px; /* 圓滑 50px */
+  position: relative;
+  overflow: scroll; /* 當box超出範圍時，可以滾動滑鼠查看 */
+}
+
+div.box {
+  background-color: aquamarine;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px; /* 圓滑 50px */
+  position: absolute;
+  animation: move 1s alternate forwards;
+}
+
+@keyframes move {
+  from{
+    background-color: aquamarine;
+    top: 0;
+    left: 0;
+  }
+  to {
+    background-color: blue;
+    top: 800px; /* 超出container範圍的移動 */
+    left: 400px;
+  }
+}
