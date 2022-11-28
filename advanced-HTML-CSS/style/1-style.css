@@ -1,0 +1,27 @@
+div.container {
+  border: 3px solid black;
+  /* 添加 flex */
+  display: flex; /* flex-direction 預設為 row */
+  flex-direction: row; /* 若要反向排列，則也可以寫：flex-direction: row-reverse */
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+}
+
+.box1 {
+  background-color: aqua;
+}
+.box2 {
+  background-color: greenyellow;
+}
+.box3 {
+  background-color: pink;
+}
+.box4 {
+  background-color: brown;
+}
+.box5 {
+  background-color: coral;
+}
