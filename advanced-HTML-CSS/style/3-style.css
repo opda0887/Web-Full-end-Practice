@@ -1,0 +1,29 @@
+div.container {
+  border: 3px solid black;
+  display: flex; 
+  flex-wrap: wrap;
+}
+
+.box {
+  height: 200px;
+  flex-grow: 1; /* 添加 flex-grow */
+  flex-basis: 150px; /* 添加 flex-basis */
+}
+
+.box1 {
+  background-color: aqua;
+}
+.box2 {
+  background-color: greenyellow;
+}
+.box3 {
+  background-color: pink;
+}
+.box4 {
+  background-color: brown;
+}
+.box5 {
+  background-color: coral;
+}
+
+/* box1長:box2長:box3長:box4長:box5長 = 1:1:1:1:1 */

@@ -1,0 +1,26 @@
+div.container {
+  border: 3px solid black;
+  display: flex; 
+  flex-wrap: wrap; /* 添加 flex-wrap */
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+}
+
+.box1 {
+  background-color: aqua;
+}
+.box2 {
+  background-color: greenyellow;
+}
+.box3 {
+  background-color: pink;
+}
+.box4 {
+  background-color: brown;
+}
+.box5 {
+  background-color: coral;
+}
