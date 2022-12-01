@@ -1,0 +1,24 @@
+div.container {
+  border: 3px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row; /* 此方向會影響 justify-content 的結果 */
+  /* flex-start, flex-end, center */
+  /* space-between, space-around, space-evenly */
+  justify-content: space-evenly; /* 添加 justify-content */
+}
+
+div.box {
+  width: 200px;
+  height: 200px;
+}
+
+.box1 {
+  background-color: aquamarine;
+}
+.box2 {
+  background-color: blueviolet;
+}
+.box3 {
+  background-color: brown;
+}

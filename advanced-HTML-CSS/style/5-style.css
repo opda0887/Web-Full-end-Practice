@@ -1,0 +1,25 @@
+div.container {
+  height: 600px;
+  border: 3px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  /* flex-start, flex-end, center */
+  align-items: center; /* 添加 align-items */
+  /* align-items: stretch; */  /* 左邊這個可以自己玩玩看*/
+}
+
+div.box {
+  width: 200px;
+  /* height: 200px; */
+  /* 沒做 height 設定時，其 box 的高會依據其 content 而改變 */
+}
+
+.box1 {
+  background-color: aquamarine;
+}
+.box2 {
+  background-color: blueviolet;
+}
+.box3 {
+  background-color: brown;
+}
