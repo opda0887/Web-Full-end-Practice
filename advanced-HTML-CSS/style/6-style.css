@@ -1,0 +1,21 @@
+div.container {
+  border: 3px solid black;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+div.box {
+  height: 200px;
+  /* flex-grow flex-shrink flex-basis */
+  flex: 1 1 150px;
+}
+
+.box1 {
+  background-color: aquamarine;
+}
+.box2 {
+  background-color: blueviolet;
+}
+.box3 {
+  background-color: brown;
+}
