@@ -1,0 +1,42 @@
+* {
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  background-color: rgb(41, 41, 41);
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: aliceblue;
+}
+
+/* 第一種 nav bar */
+nav ul.ul-1 li {
+  display: flex;
+}
+nav ul.ul-1 li a {
+  padding: 0.75rem 0.75rem; /* padding 在 <a> 中 */
+  transition: all 0.3s ease;
+}
+nav ul.ul-1 li a:hover {
+  background-color: rgb(102, 102, 102);
+}
+
+/* 第二種 nav bar */
+nav ul.ul-2 li {
+  padding: 0.75rem 0.75rem; /* padding 在 <li> 中 */
+}
+nav ul.ul-2 li a{
+  transition: all 0.3s ease;
+}
+nav ul.ul-2 li a:hover {
+  color: chartreuse;
+}

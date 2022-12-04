@@ -1,0 +1,31 @@
+/* 設定 universal selecting: 對所有標籤的改動 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* 增加 padding 時，不會增加水平的長度 */
+}
+
+header {
+  background: #c4c4c4;
+  width: 100%;
+  padding: 1rem;
+}
+
+nav {
+  background: rgb(48, 48, 48);
+  padding-left: 1rem;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+}
+
+nav ul li {
+  padding: 0.75rem 0.75rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: aliceblue;
+}
