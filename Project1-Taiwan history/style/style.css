@@ -22,10 +22,11 @@ nav ul {
 }
 
 nav ul li {
-  padding: 0.75rem 0.75rem;
+  padding: 0.9rem 0.75rem;
 }
 
 nav ul li a {
   text-decoration: none;
   color: aliceblue;
+  font-size: 1.25rem;
 }
