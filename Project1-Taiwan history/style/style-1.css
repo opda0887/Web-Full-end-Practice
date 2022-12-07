@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box; /* 增加 padding 時，不會增加水平的長度 */
+  font-family: Montserrat;
 }
 
 header {
@@ -29,4 +30,40 @@ nav ul li a {
   text-decoration: none;
   color: aliceblue;
   font-size: 1.25rem;
+  transition: all 0.25s ease;
+}
+nav ul li a:hover {
+  color: rgb(100, 249, 100);
+}
+
+.headerTitle {
+  font-size: 2.5rem;
+}
+
+.headerText {
+  font-size: 1.5rem;
+}
+
+.active {
+  color: rgb(100, 249, 100);
+}
+
+main {
+  width: 100%;
+  display: flex;
+}
+
+.left , .right {
+  padding: 1.5rem;
+}
+
+section.right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section.right h4 {
+  font-size: 1.3rem;
+  text-align: center;
 }
