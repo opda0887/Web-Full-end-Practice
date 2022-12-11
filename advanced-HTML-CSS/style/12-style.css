@@ -1,0 +1,10 @@
+/* 設定 font-face */
+@font-face {
+  font-family: 'easyfont'; /* 自行取名 */
+  src: url(../font/JasonHandwriting5p.ttf); /* 字體檔案連結 */
+}
+
+* {
+  font-family: 'easyfont'; /* 使用安裝後字體 */
+  font-size: 1.25rem;
+}
