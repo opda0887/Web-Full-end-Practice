@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* nested */
+header {
+  h1 {
+    color: coral;
+  }
+}
+
+/* variable */
+$themecolor: black;
+html {
+  background-color: $themecolor;
+}
+
+/* Self Ampersand */
+main {
+  background-color: rgb(65, 86, 87);
+  p {
+    color: white;
+  }
+  &:hover {
+    background-color: darkgreen;
+  }
+}
+
+/* import */
+@import "./footer";
+
+/* mixin */
+@mixin setFlex($flexDirection) {
+  display: flex;
+  flex-direction: $flexDirection;
+}
+
+div.box1 {
+  @include setFlex(column);
+}

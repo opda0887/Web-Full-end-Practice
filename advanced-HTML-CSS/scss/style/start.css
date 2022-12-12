@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* nested */
+header h1 {
+  color: coral;
+}
+
+/* variable */
+html {
+  background-color: black;
+}
+
+/* Self Ampersand */
+main {
+  background-color: rgb(65, 86, 87);
+}
+main p {
+  color: white;
+}
+main:hover {
+  background-color: darkgreen;
+}
+
+/* import */
+footer h1 {
+  color: aquamarine;
+  font-weight: bold;
+}
+
+/* mixin */
+div.box1 {
+  display: flex;
+  flex-direction: column;
+}/*# sourceMappingURL=start.css.map */
