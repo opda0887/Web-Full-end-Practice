@@ -2,4 +2,57 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+$defaultColor: #09777D;
+
+h1, h2, h3, h4, h5 {
+  font-weight: normal;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 1.2rem;
+  div.logo {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    flex: 6 1 400px;
+    img {
+      width: 8vw;
+      height: 8vh;
+    }
+    h1 {
+      font-size: 1.9rem;
+    }
+  }
+
+  nav {
+    flex: 1 1 400px;
+    ul {
+      display: flex;
+      list-style-type: none;
+      justify-content: space-around;
+      a {
+        text-decoration: none;
+        color: $defaultColor;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px){
+  header {
+    div.logo {
+      img {
+        width: 15vw;
+        height: 15vh;
+      }
+    }
+  }
 }

@@ -2,4 +2,50 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: normal;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 1.2rem;
+}
+header div.logo {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  flex: 6 1 400px;
+}
+header div.logo img {
+  width: 8vw;
+  height: 8vh;
+}
+header div.logo h1 {
+  font-size: 1.9rem;
+}
+header nav {
+  flex: 1 1 400px;
+}
+header nav ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+}
+header nav ul a {
+  text-decoration: none;
+  color: #09777D;
+  font-size: 1.2rem;
+}
+
+@media screen and (max-width: 500px) {
+  header div.logo img {
+    width: 15vw;
+    height: 15vh;
+  }
 }/*# sourceMappingURL=style.css.map */
