@@ -14,6 +14,7 @@ header {
   align-items: center;
   flex-wrap: wrap;
   margin-top: 1.2rem;
+  margin-bottom: 1rem;
 }
 header div.logo {
   display: flex;
@@ -48,4 +49,42 @@ header nav ul a {
     width: 15vw;
     height: 15vh;
   }
+}
+main section.backgroungImg {
+  background-image: url(../Pictures/pexels-photo-416676.jpeg);
+  width: 100%;
+  height: 86.9vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main section.backgroungImg h3 {
+  text-align: center;
+  color: aliceblue;
+  font-size: 3rem;
+  font-weight: bold;
+}
+main section.backgroungImg button {
+  padding: 1rem 1.5rem;
+  background-color: rgb(102, 209, 173);
+  color: azure;
+  border: none;
+  border-radius: 1rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+  margin-top: 1.25rem;
+}
+main section.backgroungImg div.filter {
+  background-color: black;
+  opacity: 0.2;
+  width: 100%;
+  height: 86.9vh;
+  position: absolute;
+  top: 0;
+  z-index: -1;
 }/*# sourceMappingURL=style.css.map */
