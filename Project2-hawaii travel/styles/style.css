@@ -44,12 +44,6 @@ header nav ul a {
   font-size: 1.2rem;
 }
 
-@media screen and (max-width: 500px) {
-  header div.logo img {
-    width: 15vw;
-    height: 15vh;
-  }
-}
 main section.backgroungImg {
   background-image: url(../Pictures/pexels-photo-416676.jpeg);
   width: 100%;
@@ -87,4 +81,63 @@ main section.backgroungImg div.filter {
   position: absolute;
   top: 0;
   z-index: -1;
+}
+main section.second {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 2rem 1rem;
+}
+main section.second h3 {
+  font-size: 2rem;
+}
+main section.second section.Cards {
+  display: flex;
+  width: 80%;
+  flex-wrap: wrap;
+}
+main section.second section.Cards div.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80vh;
+  justify-content: space-around;
+  flex: 1 1 300px;
+}
+main section.second section.Cards div.card img {
+  width: 15vw;
+  height: 15vw;
+  border-radius: 50%;
+  margin: 1rem 0;
+}
+main section.second section.Cards div.card h4 {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+main section.second section.Cards div.card p {
+  font-size: 1.25rem;
+  padding: 1rem;
+}
+main section.second section.Cards div.card a {
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: aliceblue;
+  background-color: #09777D;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+@media screen and (max-width: 500px) {
+  header div.logo img {
+    width: 25vw;
+    height: 25vh;
+  }
+}
+@media screen and (max-width: 650px) {
+  main section.second section.Cards div.card img {
+    width: 45vw;
+    height: 45vw;
+  }
 }/*# sourceMappingURL=style.css.map */
