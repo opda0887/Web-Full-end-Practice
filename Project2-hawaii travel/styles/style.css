@@ -129,6 +129,31 @@ main section.second section.Cards div.card a {
   margin: 1rem 0;
 }
 
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: aliceblue;
+  background-color: rgb(184, 184, 177);
+}
+footer h3 {
+  margin: 1rem 1.25rem;
+  font-size: 2rem;
+}
+footer div.media {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex: 1 1 150px;
+  flex-wrap: wrap;
+}
+footer div.media a {
+  margin: 1rem 1.25rem;
+}
+footer div.media a img {
+  width: 5vw;
+}
+
 @media screen and (max-width: 500px) {
   header div.logo img {
     width: 25vw;
@@ -139,5 +164,13 @@ main section.second section.Cards div.card a {
   main section.second section.Cards div.card img {
     width: 45vw;
     height: 45vw;
+  }
+}
+@media screen and (max-width: 740px) {
+  footer h3 {
+    font-size: 1.5rem;
+  }
+  footer div.media a img {
+    width: 15vw;
   }
 }/*# sourceMappingURL=style.css.map */
