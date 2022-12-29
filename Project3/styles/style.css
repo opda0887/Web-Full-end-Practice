@@ -1,10 +1,71 @@
 * {
-  border: 0;
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
 }
 
-a {
+body {
+  position: relative;
+}
+
+.orange {
+  position: absolute;
+  right: 0;
+  top: -10vh;
+  width: 50vw;
+  height: 150vh;
+  z-index: -10;
+}
+
+header {
+  padding-top: 2rem;
+}
+header nav {
+  width: 100%;
+}
+header nav ul {
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+}
+header nav ul li {
+  list-style: none;
+  font-size: 1.5rem;
+}
+header nav ul li a {
   text-decoration: none;
   color: black;
+  transition: all 0.25s ease;
+  padding: 0.2rem 0.5rem;
+}
+header nav ul li a:hover {
+  background-color: rgb(191, 196, 201);
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+main section.left {
+  flex: 3 1 500px;
+  padding-left: 2rem;
+  padding-top: 2rem;
+}
+main section.left h1 {
+  font-size: 4rem;
+}
+main section.left p {
+  font-size: 1.1rem;
+}
+main section.right {
+  flex: 1 1 600px;
+  position: relative;
+}
+main section.right img.myPic {
+  width: 30rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 18vh;
+  right: 10vw;
 }/*# sourceMappingURL=style.css.map */
