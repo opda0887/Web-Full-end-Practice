@@ -70,6 +70,48 @@ main section.right img.myPic {
   top: 6vh;
   right: 12vw;
 }
+main section.table {
+  flex: 3 1 500px;
+  padding: 1.5rem;
+}
+main section.table table {
+  border-collapse: collapse;
+}
+main section.table table tr {
+  border-bottom: 2px solid gray;
+  transition: all 0.25s ease;
+}
+main section.table table tr td {
+  padding: 0.7rem;
+  font-size: 1.5rem;
+}
+main section.table table tr td img {
+  width: 4rem;
+  height: 4rem;
+}
+main section.table table tr td ul {
+  list-style: none;
+}
+main section.table table tr:hover {
+  background-color: rgb(255, 209, 124);
+}
+main section.picture {
+  position: relative;
+  flex: 1 1 600px;
+  padding: 1.5rem;
+}
+main section.picture img {
+  width: 35vw;
+}
+main section.picture div.orangeRect {
+  position: absolute;
+  background-color: rgb(224, 121, 25);
+  width: 35vw;
+  height: 35vw;
+  z-index: -10;
+  top: 80px;
+  left: 80px;
+}
 
 footer {
   padding: 1rem 2rem;
@@ -90,6 +132,7 @@ footer a {
   }
   header nav ul li {
     padding-bottom: 1rem;
+    text-decoration: underline;
   }
   main section.right {
     display: flex;
@@ -100,6 +143,22 @@ footer a {
   main section.right img.myPic {
     position: static;
     width: 60vw;
+  }
+  main section.picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  main section.picture img {
+    width: 50vw;
+    height: 50vw;
+    border-radius: 8px;
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 10px 10px 2px 1px rgba(0, 0, 0, 0.5);
+  }
+  main section.picture div.orangeRect {
+    display: none;
   }
   footer {
     display: flex;

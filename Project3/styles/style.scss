@@ -70,6 +70,50 @@ main {
       right: 12vw;
     }
   }
+
+  // second page
+  section.table{
+    flex: 3 1 500px;
+    padding: 1.5rem;
+    table {
+      border-collapse: collapse;
+      tr {
+        border-bottom: 2px solid gray;
+        td {
+          padding: 0.7rem;
+          font-size: 1.5rem;
+          img {
+            width: 4rem;
+            height: 4rem;
+          }
+          ul {
+            list-style: none;
+          }
+        }
+        transition: all 0.25s ease;
+        &:hover {
+          background-color: rgb(255, 209, 124);
+        }
+      }
+    }
+  } 
+  section.picture{
+    position: relative;
+    flex: 1 1 600px;
+    padding: 1.5rem;
+    img {
+      width: 35vw;
+    }
+    div.orangeRect {
+      position: absolute;
+      background-color: rgb(224, 121, 25);
+      width: 35vw;
+      height: 35vw;
+      z-index: -10;
+      top: 80px;
+      left: 80px;
+    }
+  }
 }
 
 footer {
@@ -94,6 +138,7 @@ footer {
         padding-left: 1.7rem;
         li {
           padding-bottom: 1rem;
+          text-decoration: underline;
         }
       }
     }
@@ -109,6 +154,23 @@ footer {
         position: static;
         width: 60vw;
       }
+    }
+
+    section.picture {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 50vw;
+        height: 50vw;
+        border-radius: 8px;
+        /* offset-x | offset-y | blur-radius | spread-radius | color */
+        box-shadow: 10px 10px 2px 1px rgba(0, 0, 0, 0.5);
+      }
+      div.orangeRect {
+        display: none;
+      }
+      margin-bottom: 1rem;
     }
   }
 
