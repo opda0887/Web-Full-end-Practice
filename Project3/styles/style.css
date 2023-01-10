@@ -112,6 +112,59 @@ main section.picture div.orangeRect {
   top: 80px;
   left: 80px;
 }
+main section.form {
+  flex: 1 1 500px;
+  padding-top: 2rem;
+  padding-left: 2rem;
+  padding-bottom: 4rem;
+}
+main section.form form {
+  min-height: 70vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+main section.form form div {
+  margin: 0.5rem;
+}
+main section.form form div label {
+  font-size: 1.5rem;
+}
+main section.form form div input, main section.form form div textarea {
+  background-color: rgb(255, 168, 113);
+  color: black;
+  font-size: 1.1rem;
+  padding: 0.25rem;
+  border: none;
+  width: 70%;
+}
+main section.form form div textarea {
+  vertical-align: top;
+}
+main section.form form button {
+  position: absolute;
+  left: 25%;
+  bottom: -9%;
+  background-color: orange;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  width: 26%;
+  padding: 0.5rem 0.5rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+main section.contact {
+  flex: 1 1 500px;
+}
+main section.contact div.content h2 {
+  margin: 2.8rem;
+  font-size: 1.75rem;
+}
+main section.contact img {
+  margin-left: 30%;
+}
 
 footer {
   padding: 1rem 2rem;

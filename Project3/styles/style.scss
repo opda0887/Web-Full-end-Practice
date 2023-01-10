@@ -114,6 +114,65 @@ main {
       left: 80px;
     }
   }
+
+
+  // Third page
+  section.form {
+    flex: 1 1 500px;
+    padding-top: 2rem;
+    padding-left: 2rem;
+    padding-bottom: 4rem;
+    form {
+      min-height: 70vh;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      div {
+        margin: 0.5rem;
+        label {
+          font-size: 1.5rem;
+        }
+        input, textarea {
+          background-color: rgb(255, 168, 113);
+          color: black;
+          font-size: 1.1rem;
+          padding: 0.25rem;
+          border: none;
+          width: 70%;
+        }
+        textarea {
+          vertical-align: top;
+        }
+      }
+      button {
+        position: absolute;
+        left: 25%;
+        bottom: -9%;
+        background-color: orange;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        width: 26%;
+        padding: 0.5rem 0.5rem;
+        font-size: 1.25rem;
+        cursor: pointer;
+      }
+    }
+  }
+
+  section.contact {
+    flex: 1 1 500px;
+    div.content {
+      h2 {
+        margin: 2.8rem;
+        font-size: 1.75rem;
+      }
+    }
+    img {
+      margin-left: 30%;
+    }
+  }
 }
 
 footer {
