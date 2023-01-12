@@ -18,6 +18,10 @@ https://grey-sailor-b4c.notion.site/CSS-intro-5dfeda374fb94594988b8c5a4ff1c7c9
 
 https://grey-sailor-b4c.notion.site/Advanced-HTML-CSS-98fe66a4646343b2ac411cb10238d6e4
 
+### Basic JavaScript
+
+https://grey-sailor-b4c.notion.site/Javascript-intro-7bec52bc3ae44955a67ccdaaf09fe5b3
+
 ### 相關查詢資源
 
 MDN (程式瑪搜尋)  
