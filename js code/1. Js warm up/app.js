@@ -26,3 +26,8 @@ let dad_first_name = "Lin";
 let dad_last_name = "Wen";
 console.log(dad_first_name + " " + dad_last_name);
 
+/**
+ * mulitiple comments
+ * 13456
+ * 798
+ */
