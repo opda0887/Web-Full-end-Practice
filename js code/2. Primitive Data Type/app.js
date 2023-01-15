@@ -29,3 +29,32 @@ console.log(country.toUpperCase());  // TAIWAN - will be printed
 
 let text = "I'm the best.";
 console.log(text.split(" "));  // meet whitespace will be cut
+
+
+// boolen
+let isPretty = true;
+console.log(isPretty);  // true - will be printed
+isPretty = false;
+console.log(isPretty);  // false - will be printed
+
+
+// undefined
+let x;
+console.log(x); // undefined - will be printed
+
+
+// null
+let y = null;
+console.log(y)  // null - will be printed
+
+
+// symbol
+let z = Symbol();
+console.log(z); // Symbol() - will be printed
+
+
+// 確認資料型態
+let t1 = true;
+let t2 = "true";
+console.log(typeof(t1));  // boolen - will be printed
+console.log(typeof(t2));  // string - will be printed
