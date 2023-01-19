@@ -29,3 +29,9 @@ for (let i=1; i<=3; i++){
   for (let j=1; j<=3; j++)
     console.log( i*j );
 }
+
+// loop through an array
+let friends = ["May", "Eddie", "Jame"];
+for (let i=0; i<friends.length; i++){
+  console.log(friends[i].toUpperCase());
+}
