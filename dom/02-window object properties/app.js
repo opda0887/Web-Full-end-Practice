@@ -22,4 +22,5 @@ student.friend.intro();
 
 // console
 window.console.log("Hi"); // Hi - will be printed
+window.console.warn("This text is yellow color.");
 window.console.error("This text is red color.");
