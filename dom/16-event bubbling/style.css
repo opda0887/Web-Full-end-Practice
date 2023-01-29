@@ -1,0 +1,11 @@
+.outside {
+  width: 800px;
+  height: 800px;
+  background-color: red;
+}
+
+.inside {
+  width: 400px;
+  height: 400px;
+  background-color: blue;
+}

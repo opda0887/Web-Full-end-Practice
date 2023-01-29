@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(253, 249, 238);
+}
+
+p {
+  font-size: 1.5rem;
+  padding: 5rem;
+}
+
+header {
+  background-color: rgb(79, 58, 58);
+  box-shadow: 2px 2px 3px 3px rgba(0, 0, 0, 0.4);
+  transition: all 0.4s;
+  font-size: 1.75rem;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style: none;
+}
+header nav ul li {
+  display: flex;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: rgb(178, 178, 178);
+  padding: 1rem 1rem;
+  transition: all 0.25s ease;
+}
+header nav ul li a:hover {
+  color: aquamarine;
+}/*# sourceMappingURL=style.css.map */

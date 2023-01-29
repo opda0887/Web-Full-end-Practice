@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$mainBackground: rgb(253, 249, 238);
+$headerBackground: rgb(79, 58, 58);
+
+$atagText: rgb(178, 178, 178);
+
+$atagText_hover: aquamarine;
+
+body {
+  background-color: $mainBackground;
+}
+
+p {
+  font-size: 1.5rem;
+  padding: 5rem;
+}
+
+// deal with the header
+header {
+  background-color: $headerBackground;
+  box-shadow: 2px 2px 3px 3px rgba(0, 0, 0, 0.4);
+  transition: all 0.4s;
+  font-size: 1.75rem;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  nav {
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-around;
+      list-style: none;
+      li {
+        display: flex;
+        a {
+          text-decoration: none;
+          color: $atagText;
+          padding: 1rem 1rem;
+          transition: all 0.25s ease;
+          &:hover {
+            color: $atagText_hover;
+          }
+        }
+      }
+    }
+  }
+}
