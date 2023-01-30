@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="opda0887 (Kiwi_Lin)">
+    <meta name="robots" content="index, follow">
+    <!-- Set the target and description -->
+    <base target="_self">
+    <meta name="description" content="">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <!-- Setting of the icon on the web -->
+    <link rel="shortcit icon" href="./img/list.png">
+    <link rel="bookmark" href="./img/list.png">
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <h1>Your Todo List</h1>
+    </header>
+    <main>
+      <form>
+        <input type="text" placeholder="Your task..." required>
+        <input type="text" placeholder="The date" onfocus="(this.type='date')" onblur="(this.type='text')" id="date">
+        <button type="submit">Add</button>
+      </form>
+
+      <div class="sort">
+        <button>Sort by Date</button>
+      </div>
+
+      <!-- Show your todos -->
+      <section></section>
+    </main>
+  </body>
+  <script src="./app.js"></script>
+</html>
