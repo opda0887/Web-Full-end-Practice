@@ -10,6 +10,10 @@ $selectionBackground: rgb(155, 83, 0);
 
 $selectionText: rgb(242, 239, 239);
 $headerText: #2b2b2b;
+$todoText: #2b2b2b;
+
+$headerFont: 'Carter One', cursive;
+$todoFont: 'Volkhov', serif;
 
 // change the selection color
 ::selection {
@@ -29,7 +33,7 @@ header {
   background-color: $headerBackground;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
   h1 {
-    font-family: 'Carter One', cursive;
+    font-family: $headerFont;
     font-size: 5rem;
     color: $headerText;
     text-shadow: 0.1em 0.1em 0.2em #b6906a;
@@ -97,6 +101,53 @@ main {
       cursor: pointer;
     }
   }
+
+  section {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    div.todo {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      width: 35vw;
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+      color: $todoText;
+      font-family: $todoFont;
+      p {
+        padding: 0.25rem 0.5rem;
+      }
+      p.todo-text { // if text is too long, make overflow -> ...
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+      button {
+        border: none;
+        background-color: $mainBackground;
+        width: 3rem;
+        height: 3rem;
+        margin-left: 1rem;
+        cursor: pointer;
+        img {
+          border-radius: 9999px;
+          width: 3rem;
+        }
+      }
+    }
+  }
+}
+
+// Todo Animation
+@keyframes scaleUp {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
 
@@ -112,6 +163,7 @@ main {
       input {
         font-size: 1rem;
         margin-right: 0.8rem;
+        padding: 1.5px 10px;
       }
       input[type=text] {
         width: 60%;
@@ -126,9 +178,23 @@ main {
         font-size: 1.15rem;
       }
     }
+    section {
+      div.todo {
+        font-size: 1.25rem;
+        button {
+          width: 2rem;
+          height: 2rem;
+          margin-left: 0.75rem;
+          img {
+            border-radius: 9999px;
+            width: 2rem;
+          }
+        }
+      }
+    }
   }
 }
-@media screen and (max-width: 410px) {
+@media screen and (max-width: 427px) {
   header {
     h1 {
       font-size: 2rem;
@@ -140,6 +206,7 @@ main {
       input {
         font-size: 0.8rem;
         margin-right: 0.65rem;
+        padding: 1px 7.5px;
       }
       input[type=text] {
         width: 60%;
@@ -152,6 +219,20 @@ main {
     div.sort {
       button {
         font-size: 0.92rem;
+      }
+    }
+    section {
+      div.todo {
+        font-size: 0.9rem;
+        button {
+          width: 1.5rem;
+          height: 1.5rem;
+          margin-left: 0.5rem;
+          img {
+            border-radius: 9999px;
+            width: 1.5rem;
+          }
+        }
       }
     }
   }

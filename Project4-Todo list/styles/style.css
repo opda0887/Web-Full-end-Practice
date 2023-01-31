@@ -94,7 +94,60 @@ main div.sort button {
   box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, 0.5);
   cursor: pointer;
 }
+main section {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main section div.todo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 35vw;
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: #2b2b2b;
+  font-family: "Volkhov", serif;
+}
+main section div.todo p {
+  padding: 0.25rem 0.5rem;
+}
+main section div.todo p.todo-text {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+main section div.todo button {
+  border: none;
+  background-color: rgb(253, 249, 238);
+  width: 3rem;
+  height: 3rem;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+main section div.todo button img {
+  border-radius: 9999px;
+  width: 3rem;
+}
 
+@-webkit-keyframes scaleUp {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
 @media screen and (max-width: 640px) {
   header h1 {
     font-size: 3rem;
@@ -105,6 +158,7 @@ main div.sort button {
   main form input {
     font-size: 1rem;
     margin-right: 0.8rem;
+    padding: 1.5px 10px;
   }
   main form input[type=text] {
     width: 60%;
@@ -116,8 +170,20 @@ main div.sort button {
   main div.sort button {
     font-size: 1.15rem;
   }
+  main section div.todo {
+    font-size: 1.25rem;
+  }
+  main section div.todo button {
+    width: 2rem;
+    height: 2rem;
+    margin-left: 0.75rem;
+  }
+  main section div.todo button img {
+    border-radius: 9999px;
+    width: 2rem;
+  }
 }
-@media screen and (max-width: 410px) {
+@media screen and (max-width: 427px) {
   header h1 {
     font-size: 2rem;
   }
@@ -127,6 +193,7 @@ main div.sort button {
   main form input {
     font-size: 0.8rem;
     margin-right: 0.65rem;
+    padding: 1px 7.5px;
   }
   main form input[type=text] {
     width: 60%;
@@ -137,5 +204,17 @@ main div.sort button {
   }
   main div.sort button {
     font-size: 0.92rem;
+  }
+  main section div.todo {
+    font-size: 0.9rem;
+  }
+  main section div.todo button {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: 0.5rem;
+  }
+  main section div.todo button img {
+    border-radius: 9999px;
+    width: 1.5rem;
   }
 }/*# sourceMappingURL=style.css.map */
