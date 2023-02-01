@@ -23,16 +23,33 @@ add.addEventListener("click", e => {
     date.innerText = ""
   else
     date.innerText = "\"" + todoDate + "\"";
+  
   Todo.appendChild(text);
   Todo.appendChild(date);
 
   // create complete and trash can
   let complete = document.createElement("button");
   complete.classList.add("complete");
+  complete.setAttribute("title", "Todo finish")
+  complete.innerHTML = '<img src="./img/check.png" alt="check button">';
+  complete.addEventListener("click", e => {
+    let todoElement = e.target.parentElement;
+    todoElement.classList.toggle("done");  // 若todo已經complete，再點擊一次則恢復原狀
+  })
+
   let trashCan = document.createElement("button");
   trashCan.classList.add("delete");
-  complete.innerHTML = '<img src="./img/check.png" alt="check button" title="Todo finish">';
-  trashCan.innerHTML = '<img src="./img/trash-bin.png" alt="delete button" title="Todo delete">';
+  trashCan.setAttribute("title", "Todo delete");
+  trashCan.innerHTML = '<img src="./img/trash-bin.png" alt="delete button">';
+  trashCan.addEventListener("click", e => {
+    let todoElement = e.target.parentElement;
+    todoElement.style.animation = "scaleDown 0.3s ease 0s 1 forwards";
+    // after the animation end, todo element will be removed
+    todoElement.addEventListener("animationend", () => {
+      todoElement.remove();
+    })
+  })
+
   Todo.appendChild(complete);
   Todo.appendChild(trashCan);
 
@@ -43,6 +60,24 @@ add.addEventListener("click", e => {
    * name -> duration -> time-function -> delay-time -> loop-count -> direction
    * https://www.w3schools.com/css/css3_animations.asp
    */
+
+  // set an object
+  let myTodo = {
+    todoText: todoText,
+    todoDate: todoDate,
+  }
+
+  // put the todo object into an array, then store data
+  let list = localStorage.getItem("list");
+  if (list == null) {
+    // if localsotrage doesn't have any element
+    localStorage.setItem("list", JSON.stringify([myTodo]));
+  } else {
+    // localsotrage have element
+    let preData = JSON.parse(list);
+    preData.push(myTodo);
+    localStorage.setItem("list", JSON.stringify(preData));
+  }
 
   // append all items into showbox
   showBox.appendChild(Todo);

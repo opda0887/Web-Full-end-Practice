@@ -64,8 +64,8 @@ main {
       border-radius: 5px;
       transition: background-color 70ms cubic-bezier(.2,0,.38,.9),outline 70ms cubic-bezier(.2,0,.38,.9); 
       :focus{
-          outline: 2px solid #0f62fe;
-          outline-offset: -2px;
+        outline: 2px solid #0f62fe;
+        outline-offset: -2px;
       }
       margin-right: 1.5rem;
     }
@@ -116,6 +116,7 @@ main {
       margin-bottom: 1rem;
       color: $todoText;
       font-family: $todoFont;
+      transition: all 0.15s ease; // make all transistion a quick transform
       p {
         padding: 0.25rem 0.5rem;
       }
@@ -132,12 +133,20 @@ main {
         margin-left: 1rem;
         cursor: pointer;
         img {
+          pointer-events: none; // prevent click on the img
           border-radius: 9999px;
           width: 3rem;
         }
       }
     }
   }
+}
+
+// todo done style
+.done {
+  opacity: 0.5;
+  text-decoration: line-through;
+  text-decoration-thickness: 0.2rem;
 }
 
 // Todo Animation
@@ -147,6 +156,12 @@ main {
   }
   to {
     transform: scale(1);
+  }
+}
+
+@keyframes scaleDown {
+  to {
+    transform: scale(0);
   }
 }
 

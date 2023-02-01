@@ -109,6 +109,7 @@ main section div.todo {
   margin-bottom: 1rem;
   color: #2b2b2b;
   font-family: "Volkhov", serif;
+  transition: all 0.15s ease;
 }
 main section div.todo p {
   padding: 0.25rem 0.5rem;
@@ -127,8 +128,15 @@ main section div.todo button {
   cursor: pointer;
 }
 main section div.todo button img {
+  pointer-events: none;
   border-radius: 9999px;
   width: 3rem;
+}
+
+.done {
+  opacity: 0.5;
+  text-decoration: line-through;
+  text-decoration-thickness: 0.2rem;
 }
 
 @-webkit-keyframes scaleUp {
@@ -146,6 +154,16 @@ main section div.todo button img {
   }
   to {
     transform: scale(1);
+  }
+}
+@-webkit-keyframes scaleDown {
+  to {
+    transform: scale(0);
+  }
+}
+@keyframes scaleDown {
+  to {
+    transform: scale(0);
   }
 }
 @media screen and (max-width: 640px) {
