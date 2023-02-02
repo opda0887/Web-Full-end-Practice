@@ -14,11 +14,11 @@ add.addEventListener("click", e => {
   Todo.classList.add("todo");
   let text = document.createElement("p");
   text.classList.add("todo-text");
-  let date = document.createElement("p");
-  date.classList.add("todo-date");
-
   text.innerText = todoText;
   text.setAttribute("title", todoText); // if text is overflowed, curser hover and show all text
+
+  let date = document.createElement("p");
+  date.classList.add("todo-date");
   if (todoDate == "")
     date.innerText = ""
   else
@@ -35,6 +35,21 @@ add.addEventListener("click", e => {
   complete.addEventListener("click", e => {
     let todoElement = e.target.parentElement;
     todoElement.classList.toggle("done");  // 若todo已經complete，再點擊一次則恢復原狀
+    
+    // edit the todo done check
+    let todoElement_text = todoElement.children[0].innerText;
+    let todoList = localStorage.getItem("list");
+    let todoListArray = JSON.parse(todoList);
+    todoListArray.forEach((element) => {
+      if (element.todoText == todoElement_text) {
+        if (element.todoDone == 1)
+          element.todoDone = 0;
+        else
+          element.todoDone = 1;
+        return;
+      }
+    })
+    localStorage.setItem("list", JSON.stringify(todoListArray));
   })
 
   let trashCan = document.createElement("button");
@@ -46,6 +61,19 @@ add.addEventListener("click", e => {
     todoElement.style.animation = "scaleDown 0.3s ease 0s 1 forwards";
     // after the animation end, todo element will be removed
     todoElement.addEventListener("animationend", () => {
+      let todoElement_text = todoElement.children[0].innerText;
+      
+      let mylist = localStorage.getItem("list");
+      let mylistArray = JSON.parse(mylist);
+      // remove the localstorage partical element
+      mylistArray.forEach((element, index) => {
+        if (element.todoText == todoElement_text) {
+          mylistArray.splice(index, 1); // remove certain element
+          localStorage.setItem("list", JSON.stringify(mylistArray));
+          return;
+        }
+      })
+
       todoElement.remove();
     })
   })
@@ -65,6 +93,7 @@ add.addEventListener("click", e => {
   let myTodo = {
     todoText: todoText,
     todoDate: todoDate,
+    todoDone: 0,
   }
 
   // put the todo object into an array, then store data
@@ -86,3 +115,91 @@ add.addEventListener("click", e => {
   form.children[0].value = "";
   form.children[1].value = "";
 });
+
+
+
+// show the localstorage item
+let mylist = localStorage.getItem("list");
+if (mylist != null) {
+  let mylistArray = JSON.parse(mylist);
+  mylistArray.forEach(element => {
+    let todoText = element.todoText;
+    let todoDate = element.todoDate;
+    let todoDone = element.todoDone;
+
+    let Todo = document.createElement("div");
+    Todo.classList.add("todo");
+    // check todo is done or not
+    if (todoDone == 1) {
+      Todo.classList.add("done");
+    }
+
+    let text = document.createElement("p");
+    text.classList.add("todo-text");
+    text.innerText = todoText;
+    text.setAttribute("title", todoText); // if text is overflowed, curser hover and show all text
+
+    let date = document.createElement("p");
+    date.classList.add("todo-date");
+    if (todoDate == "")
+      date.innerText = ""
+    else
+      date.innerText = "\"" + todoDate + "\"";
+
+    let complete = document.createElement("button");
+    complete.classList.add("complete");
+    complete.setAttribute("title", "Todo finish")
+    complete.innerHTML = '<img src="./img/check.png" alt="check button">';
+    complete.addEventListener("click", e => {
+      let todoElement = e.target.parentElement;
+      todoElement.classList.toggle("done");  // 若todo已經complete，再點擊一次則恢復原狀
+
+      // edit the todo done check
+      let todoElement_text = todoElement.children[0].innerText;
+      let todoList = localStorage.getItem("list");
+      let todoListArray = JSON.parse(todoList);
+      todoListArray.forEach((element) => {
+        if (element.todoText == todoElement_text) {
+          if (element.todoDone == 1)
+            element.todoDone = 0;
+          else
+            element.todoDone = 1;
+          return;
+        }
+      });
+      localStorage.setItem("list", JSON.stringify(todoListArray));
+    })
+
+    let trashCan = document.createElement("button");
+    trashCan.classList.add("delete");
+    trashCan.setAttribute("title", "Todo delete");
+    trashCan.innerHTML = '<img src="./img/trash-bin.png" alt="delete button">';
+    trashCan.addEventListener("click", e => {
+      let todoElement = e.target.parentElement;
+      todoElement.style.animation = "scaleDown 0.3s ease 0s 1 forwards";
+      // after the animation end, todo element will be removed
+      todoElement.addEventListener("animationend", () => {
+        let todoElement_text = todoElement.children[0].innerText;
+      
+        let mylist = localStorage.getItem("list");
+        let mylistArray = JSON.parse(mylist);
+        // remove the localstorage partical element
+        mylistArray.forEach((element, index) => {
+          if (element.todoText == todoElement_text) {
+            mylistArray.splice(index, 1); // remove certain element
+            localStorage.setItem("list", JSON.stringify(mylistArray));
+            return;
+          }
+        })
+        
+        todoElement.remove();
+      })
+    })
+
+    Todo.appendChild(text);
+    Todo.appendChild(date);
+    Todo.appendChild(complete);
+    Todo.appendChild(trashCan);
+    showBox.appendChild(Todo);
+  });
+};
