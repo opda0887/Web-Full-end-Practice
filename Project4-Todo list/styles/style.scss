@@ -131,10 +131,10 @@ main {
         width: 3rem;
         height: 3rem;
         margin-left: 1rem;
+        border-radius: 9999px;
         cursor: pointer;
         img {
           pointer-events: none; // prevent click on the img
-          border-radius: 9999px;
           width: 3rem;
         }
       }

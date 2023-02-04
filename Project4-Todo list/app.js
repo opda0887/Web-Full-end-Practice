@@ -4,6 +4,7 @@ let showBox = document.querySelector("section");
  * ----------------------- FUNCTION PART ---------------------------
  * render: after edit the todo -> re-append the todos
  * acceptTodo: after click the done button -> do this
+ * removeTodo: after click the remove button -> do this
  * sortWithDate: sort todo with dates
  * removeAll: after sort, remove previous todos
  * ----------------------- FUNCTION PART ---------------------------
@@ -58,35 +59,26 @@ function render(mylist) {
       localStorage.setItem("list", JSON.stringify(todoListArray));
     })
 
+    let edit = document.createElement("button");
+    edit.classList.add("edit");
+    edit.setAttribute("title", "Todo edit");
+    edit.innerHTML = '<img src="./img/edit.png" alt="edit button">';
+    edit.addEventListener("click", (e) => {
+      editTodo(e);
+    })
+
     let trashCan = document.createElement("button");
     trashCan.classList.add("delete");
     trashCan.setAttribute("title", "Todo delete");
     trashCan.innerHTML = '<img src="./img/trash-bin.png" alt="delete button">';
     trashCan.addEventListener("click", e => {
-      let todoElement = e.target.parentElement;
-      todoElement.style.animation = "scaleDown 0.3s ease 0s 1 forwards";
-      // after the animation end, todo element will be removed
-      todoElement.addEventListener("animationend", () => {
-        let todoElement_text = todoElement.children[0].innerText;
-      
-        let mylist = localStorage.getItem("list");
-        let mylistArray = JSON.parse(mylist);
-        // remove the localstorage partical element
-        mylistArray.forEach((element, index) => {
-          if (element.todoText == todoElement_text) {
-            mylistArray.splice(index, 1); // remove certain element
-            localStorage.setItem("list", JSON.stringify(mylistArray));
-            return;
-          }
-        })
-        
-        todoElement.remove();
-      })
+      removeTodo(e);
     })
 
     Todo.appendChild(text);
     Todo.appendChild(date);
     Todo.appendChild(complete);
+    Todo.appendChild(edit);
     Todo.appendChild(trashCan);
     showBox.appendChild(Todo);
   });
@@ -110,6 +102,55 @@ function acceptTodo(e) {
     }
   })
   localStorage.setItem("list", JSON.stringify(todoListArray));
+}
+
+function removeTodo(e) {
+  let todoElement = e.target.parentElement;
+  todoElement.style.animation = "scaleDown 0.3s ease 0s 1 forwards";
+  // after the animation end, todo element will be removed
+  todoElement.addEventListener("animationend", () => {
+    let todoElement_text = todoElement.children[0].innerText;
+    
+    let mylist = localStorage.getItem("list");
+    let mylistArray = JSON.parse(mylist);
+    // remove the localstorage partical element
+    mylistArray.forEach((element, index) => {
+      if (element.todoText == todoElement_text) {
+        mylistArray.splice(index, 1); // remove certain element
+        localStorage.setItem("list", JSON.stringify(mylistArray));
+        return;
+      }
+    })
+
+    todoElement.remove();
+  })
+}
+
+function editTodo(e) {
+  let todoElement = e.target.parentElement;
+    todoElement.style.animation = "scaleDown 0.3s ease 0s 1 forwards";
+    // after the animation end, todo element will be removed
+    todoElement.addEventListener("animationend", () => {
+      let todoElement_text = todoElement.children[0].innerText;
+
+      // make edit on the todo element
+      let form = document.querySelector("form");
+      form.children[0].value = todoElement_text;
+      form.children[1].value = "";
+      
+      let mylist = localStorage.getItem("list");
+      let mylistArray = JSON.parse(mylist);
+      // remove the localstorage partical element
+      mylistArray.forEach((element, index) => {
+        if (element.todoText == todoElement_text) {
+          mylistArray.splice(index, 1); // remove certain element
+          localStorage.setItem("list", JSON.stringify(mylistArray));
+          return;
+        }
+      })
+
+      todoElement.remove();
+    })
 }
 
 // 按照日期排序(a前b後：日期由先至後)
@@ -171,34 +212,26 @@ add.addEventListener("click", e => {
     acceptTodo(e);
   })
 
+  // create edit button and its methods
+  let edit = document.createElement("button");
+  edit.classList.add("edit");
+  edit.setAttribute("title", "Todo edit");
+  edit.innerHTML = '<img src="./img/edit.png" alt="edit button">';
+  edit.addEventListener("click", (e) => {
+    editTodo(e);
+  })
+
   // create trash can button and its methods
   let trashCan = document.createElement("button");
   trashCan.classList.add("delete");
   trashCan.setAttribute("title", "Todo delete");
   trashCan.innerHTML = '<img src="./img/trash-bin.png" alt="delete button">';
   trashCan.addEventListener("click", e => {
-    let todoElement = e.target.parentElement;
-    todoElement.style.animation = "scaleDown 0.3s ease 0s 1 forwards";
-    // after the animation end, todo element will be removed
-    todoElement.addEventListener("animationend", () => {
-      let todoElement_text = todoElement.children[0].innerText;
-      
-      let mylist = localStorage.getItem("list");
-      let mylistArray = JSON.parse(mylist);
-      // remove the localstorage partical element
-      mylistArray.forEach((element, index) => {
-        if (element.todoText == todoElement_text) {
-          mylistArray.splice(index, 1); // remove certain element
-          localStorage.setItem("list", JSON.stringify(mylistArray));
-          return;
-        }
-      })
-
-      todoElement.remove();
-    })
+    removeTodo(e);
   })
 
   Todo.appendChild(complete);
+  Todo.appendChild(edit);
   Todo.appendChild(trashCan);
 
   // make animation
