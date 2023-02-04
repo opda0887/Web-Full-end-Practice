@@ -19,3 +19,11 @@ console.log(friends);
 
 friends.unshift("May");
 console.log(friends);
+
+// combine two array
+let arr1 = ["Eddie", "Peter"];
+let arr2 = ["May", "Kiwi"];
+
+let combineArray = arr1.concat(arr2); // an array
+console.log(combineArray);            // Eddie, Peter, May, Kiwi - will be printed
+console.log(typeof combineArray);     // object - will be printed
