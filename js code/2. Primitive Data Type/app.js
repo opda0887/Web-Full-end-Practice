@@ -5,6 +5,13 @@ console.log(pi.toFixed(2));  // 3.14 - will be printed
 
 
 //String
+let str1 = "Peter";
+let str2 = "May";
+let str3 = "5";
+let str4 = "4999999999999";
+console.log(str1 > str2);
+console.log(str3 > str4);
+
 let name = "Kiwi Lin";
 console.log(name.length);  // 8 - will be printed
 
