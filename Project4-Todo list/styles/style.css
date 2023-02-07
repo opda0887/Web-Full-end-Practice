@@ -19,6 +19,7 @@ body {
 }
 
 header {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,6 +32,21 @@ header h1 {
   font-size: 5rem;
   color: #2b2b2b;
   text-shadow: 0.1em 0.1em 0.2em #b6906a;
+}
+header button.menu {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  width: 5rem;
+  height: 5rem;
+  background-color: #ffca95;
+  border: none;
+  cursor: pointer;
+}
+header button.menu img {
+  pointer-events: none;
+  width: 5rem;
+  height: 5rem;
 }
 
 main {
