@@ -31,3 +31,30 @@ class Student extends Person {
 let Kiwi = new Student("Kiwi", 25, 95);
 Kiwi.sayHi();
 Kiwi.doTest();
+
+/**
+ * Class - static properties and methods
+ * build static value/function in the class
+ */
+
+class Circle {
+  static pi = 3.14159; // 在class中設立定植
+
+  constructor(radius) {
+    this.radius = radius;
+  }
+
+  printArea() {
+    console.log("The circle area is:", Circle.pi * this.radius * this.radius);
+  }
+
+  static printAreaFormula() {
+    // 在class中設立固定函式
+    console.log("Calculate area: pi * radius^2.");
+  }
+}
+
+let c1 = new Circle(10);
+
+Circle.printAreaFormula();
+c1.printArea();

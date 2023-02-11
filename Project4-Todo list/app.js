@@ -11,7 +11,7 @@ let showBox = document.querySelector("section");
  */
 function render(mylist) {
   let mylistArray = JSON.parse(mylist);
-  mylistArray.forEach(element => {
+  mylistArray.forEach((element) => {
     let todoText = element.todoText;
     let todoDate = element.todoDate;
     let todoDone = element.todoDone;
@@ -30,18 +30,16 @@ function render(mylist) {
 
     let date = document.createElement("p");
     date.classList.add("todo-date");
-    if (todoDate == "")
-      date.innerText = ""
-    else
-      date.innerText = "\"" + todoDate + "\"";
+    if (todoDate == "") date.innerText = "";
+    else date.innerText = '"' + todoDate + '"';
 
     let complete = document.createElement("button");
     complete.classList.add("complete");
-    complete.setAttribute("title", "Todo finish")
+    complete.setAttribute("title", "Todo finish");
     complete.innerHTML = '<img src="./img/check.png" alt="check button">';
-    complete.addEventListener("click", e => {
+    complete.addEventListener("click", (e) => {
       let todoElement = e.target.parentElement;
-      todoElement.classList.toggle("done");  // 若todo已經complete，再點擊一次則恢復原狀
+      todoElement.classList.toggle("done"); // 若todo已經complete，再點擊一次則恢復原狀
 
       // edit the todo done check
       let todoElement_text = todoElement.children[0].innerText;
@@ -49,15 +47,13 @@ function render(mylist) {
       let todoListArray = JSON.parse(todoList);
       todoListArray.forEach((element) => {
         if (element.todoText == todoElement_text) {
-          if (element.todoDone == 1)
-            element.todoDone = 0;
-          else
-            element.todoDone = 1;
+          if (element.todoDone == 1) element.todoDone = 0;
+          else element.todoDone = 1;
           return;
         }
       });
       localStorage.setItem("list", JSON.stringify(todoListArray));
-    })
+    });
 
     let edit = document.createElement("button");
     edit.classList.add("edit");
@@ -65,15 +61,15 @@ function render(mylist) {
     edit.innerHTML = '<img src="./img/edit.png" alt="edit button">';
     edit.addEventListener("click", (e) => {
       editTodo(e);
-    })
+    });
 
     let trashCan = document.createElement("button");
     trashCan.classList.add("delete");
     trashCan.setAttribute("title", "Todo delete");
     trashCan.innerHTML = '<img src="./img/trash-bin.png" alt="delete button">';
-    trashCan.addEventListener("click", e => {
+    trashCan.addEventListener("click", (e) => {
       removeTodo(e);
-    })
+    });
 
     Todo.appendChild(text);
     Todo.appendChild(date);
@@ -86,21 +82,19 @@ function render(mylist) {
 
 function acceptTodo(e) {
   let todoElement = e.target.parentElement;
-  todoElement.classList.toggle("done");  // 若todo已經complete，再點擊一次則恢復原狀
-  
+  todoElement.classList.toggle("done"); // 若todo已經complete，再點擊一次則恢復原狀
+
   // edit the todo done check
   let todoElement_text = todoElement.children[0].innerText;
   let todoList = localStorage.getItem("list");
   let todoListArray = JSON.parse(todoList);
   todoListArray.forEach((element) => {
     if (element.todoText == todoElement_text) {
-      if (element.todoDone == 1)
-        element.todoDone = 0;
-      else
-        element.todoDone = 1;
+      if (element.todoDone == 1) element.todoDone = 0;
+      else element.todoDone = 1;
       return;
     }
-  })
+  });
   localStorage.setItem("list", JSON.stringify(todoListArray));
 }
 
@@ -110,7 +104,7 @@ function removeTodo(e) {
   // after the animation end, todo element will be removed
   todoElement.addEventListener("animationend", () => {
     let todoElement_text = todoElement.children[0].innerText;
-    
+
     let mylist = localStorage.getItem("list");
     let mylistArray = JSON.parse(mylist);
     // remove the localstorage partical element
@@ -120,50 +114,49 @@ function removeTodo(e) {
         localStorage.setItem("list", JSON.stringify(mylistArray));
         return;
       }
-    })
+    });
 
     todoElement.remove();
-  })
+  });
 }
 
 function editTodo(e) {
   let todoElement = e.target.parentElement;
-    todoElement.style.animation = "scaleDown 0.3s ease 0s 1 forwards";
-    // after the animation end, todo element will be removed
-    todoElement.addEventListener("animationend", () => {
-      let todoElement_text = todoElement.children[0].innerText;
+  todoElement.style.animation = "scaleDown 0.3s ease 0s 1 forwards";
+  // after the animation end, todo element will be removed
+  todoElement.addEventListener("animationend", () => {
+    let todoElement_text = todoElement.children[0].innerText;
 
-      // make edit on the todo element
-      let form = document.querySelector("form");
-      form.children[0].value = todoElement_text;
-      form.children[1].value = "";
-      
-      let mylist = localStorage.getItem("list");
-      let mylistArray = JSON.parse(mylist);
-      // remove the localstorage partical element
-      mylistArray.forEach((element, index) => {
-        if (element.todoText == todoElement_text) {
-          mylistArray.splice(index, 1); // remove certain element
-          localStorage.setItem("list", JSON.stringify(mylistArray));
-          return;
-        }
-      })
+    // make edit on the todo element
+    let form = document.querySelector("form");
+    form.children[0].value = todoElement_text;
+    form.children[1].value = "";
 
-      todoElement.remove();
-    })
+    let mylist = localStorage.getItem("list");
+    let mylistArray = JSON.parse(mylist);
+    // remove the localstorage partical element
+    mylistArray.forEach((element, index) => {
+      if (element.todoText == todoElement_text) {
+        mylistArray.splice(index, 1); // remove certain element
+        localStorage.setItem("list", JSON.stringify(mylistArray));
+        return;
+      }
+    });
+
+    todoElement.remove();
+  });
 }
 
 // 按照日期排序(a前b後：日期由先至後)
 function sortWithDate() {
-
   removeAll();
-  
+
   let todoList = localStorage.getItem("list");
   let todoListArray = JSON.parse(todoList);
 
-  todoListArray.sort(function(a,b){
-      return a.todoDate.localeCompare(b.todoDate);
-  })
+  todoListArray.sort(function (a, b) {
+    return a.todoDate.localeCompare(b.todoDate);
+  });
 
   todoList = JSON.stringify(todoListArray);
   localStorage.setItem("list", todoList);
@@ -176,7 +169,7 @@ function removeAll() {
 
 // when click the add button
 let add = document.querySelector("form button");
-add.addEventListener("click", e => {
+add.addEventListener("click", (e) => {
   // prevent form from being submitted
   e.preventDefault();
 
@@ -195,22 +188,20 @@ add.addEventListener("click", e => {
 
   let date = document.createElement("p");
   date.classList.add("todo-date");
-  if (todoDate == "")
-    date.innerText = ""
-  else
-    date.innerText = "\"" + todoDate + "\"";
-  
+  if (todoDate == "") date.innerText = "";
+  else date.innerText = '"' + todoDate + '"';
+
   Todo.appendChild(text);
   Todo.appendChild(date);
 
   // create complete button and its methods
   let complete = document.createElement("button");
   complete.classList.add("complete");
-  complete.setAttribute("title", "Todo finish")
+  complete.setAttribute("title", "Todo finish");
   complete.innerHTML = '<img src="./img/check.png" alt="check button">';
-  complete.addEventListener("click", e => {
+  complete.addEventListener("click", (e) => {
     acceptTodo(e);
-  })
+  });
 
   // create edit button and its methods
   let edit = document.createElement("button");
@@ -219,16 +210,16 @@ add.addEventListener("click", e => {
   edit.innerHTML = '<img src="./img/edit.png" alt="edit button">';
   edit.addEventListener("click", (e) => {
     editTodo(e);
-  })
+  });
 
   // create trash can button and its methods
   let trashCan = document.createElement("button");
   trashCan.classList.add("delete");
   trashCan.setAttribute("title", "Todo delete");
   trashCan.innerHTML = '<img src="./img/trash-bin.png" alt="delete button">';
-  trashCan.addEventListener("click", e => {
+  trashCan.addEventListener("click", (e) => {
     removeTodo(e);
-  })
+  });
 
   Todo.appendChild(complete);
   Todo.appendChild(edit);
@@ -247,7 +238,7 @@ add.addEventListener("click", e => {
     todoText: todoText,
     todoDate: todoDate,
     todoDone: 0,
-  }
+  };
 
   // put the todo object into an array, then store data
   let list = localStorage.getItem("list");
@@ -270,13 +261,13 @@ add.addEventListener("click", e => {
 });
 
 // when click the sort button
-let sortButton = document.querySelector("div.sort button")
+let sortButton = document.querySelector("div.sort button");
 sortButton.addEventListener("click", () => {
   sortWithDate();
-})
+});
 
 // show the localstorage item
 let mylist = localStorage.getItem("list");
 if (mylist != null) {
   render(mylist);
-};
+}
