@@ -44,3 +44,59 @@ multiply(5, 2); // 10 - will be printed
 let name = "Kiwi";
 console.log(`Hello, I am ${name}.`);
 // Hello, I am Kiwi. - will bw printed
+
+/**
+ * floating point
+ */
+
+console.log(0.1 + 0.2 == 0.3); // false will be printed
+
+// toFixed(1)：取到小數點後一位
+console.log((0.1 + 0.2).toFixed(1) == (0.3).toFixed(1)); // true - will be printed
+
+/**
+ * IIFE
+ */
+
+(function (name) {
+  console.log(`Hello, ${name}.`);
+})("Kiwi");
+// Hello, Kiwi. - will be printed
+
+/**
+ * destruct an object
+ * the element needs to be the same
+ */
+
+// construct an object
+let Kiwi = {
+  hisname: "Kiwi",
+  hisage: 19,
+  gender: "male",
+
+  friend: {
+    fullName: "Peter",
+  },
+};
+
+// destruct an object
+let { hisname, hisage, gender } = Kiwi;
+let { fullName } = Kiwi.friend;
+
+console.log(hisname, fullName);
+// Kiwi Peter - will be printed
+
+/**
+ * Switch
+ */
+
+let checkAge = 18;
+
+switch (checkAge) {
+  case 18:
+    console.log(`You are 18.`);
+    break;
+  default:
+    console.log(`Not 18.`);
+    break;
+}
