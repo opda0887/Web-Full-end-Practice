@@ -1,0 +1,22 @@
+{
+  "name": "learn",
+  "version": "1.0.0",
+  "description": "A learn npm test",
+  "main": "index.js",
+  "scripts": {
+    "myApp": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/opda0887/Web-Full-end-Practice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/opda0887/Web-Full-end-Practice/issues"
+  },
+  "homepage": "https://github.com/opda0887/Web-Full-end-Practice#readme",
+  "dependencies": {
+    "cowsay": "^1.5.0"
+  }
+}
