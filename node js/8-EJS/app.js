@@ -1,13 +1,26 @@
 const express = require("express");
 const app = express();
 const ejs = require("ejs");
-const path = require("path");
 
 // middleware
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {
-  res.render("index.ejs");
+  // deal with objects in array
+  const students = [
+    { name: "Peter", age: 1, gender: "female", score: 100 },
+    { name: "May", age: 1, gender: "male", score: 15 },
+    { name: "Wang", age: 1, gender: "female", score: 90 },
+    { name: "Kiwi", age: 1, gender: "male", score: 74 },
+  ];
+  res.render("index.ejs", { students });
+});
+
+// get the form value
+app.get("/response", (req, res) => {
+  let { name1, age1 } = req.query;
+  console.log(name1, age1);
+  res.render("formAns.ejs", { name1: name1, age1: age1 });
 });
 
 // get user input in the http

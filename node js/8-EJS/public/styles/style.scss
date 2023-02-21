@@ -8,3 +8,14 @@ body {
   background-color: antiquewhite;
   color: rgb(32, 32, 32);
 }
+
+table,
+tr,
+td {
+  border-collapse: collapse;
+  border: 1.5px solid orange;
+}
+
+td {
+  padding: 0.5rem;
+}

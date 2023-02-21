@@ -9,5 +9,39 @@
   </head>
   <body>
     <h1>In the home page</h1>
+    <% for(let i=0; i<10;i++){ %>
+    <p>i= <%= i %></p>
+    <% } %>
+
+    <br />
+
+    <h1>Simple form</h1>
+    <form action="/response" method="GET">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name1" />
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age1" />
+      <button type="submit">Submit the form</button>
+    </form>
   </body>
+
+  <br />
+
+  <h1>Deal with objetcs in an array</h1>
+  <table>
+    <tr>
+      <td>name</td>
+      <td>age</td>
+      <td>gender</td>
+      <td>score</td>
+    </tr>
+    <% students.forEach(stu => { %>
+    <tr>
+      <td><%= stu.name %></td>
+      <td><%= stu.age %></td>
+      <td><%= stu.gender %></td>
+      <td><%= stu.score %></td>
+    </tr>
+    <%}); %>
+  </table>
 </html>
