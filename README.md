@@ -26,6 +26,18 @@ https://grey-sailor-b4c.notion.site/Javascript-intro-7bec52bc3ae44955a67ccdaaf09
 
 https://grey-sailor-b4c.notion.site/DOM-763366964f6246478b0c0f70ac285ebb
 
+### Node.js
+
+https://www.notion.so/Node-js-c92e9412d1f44baa8de99f9155fd403f?pvs=4
+
+### Git and Version Control
+
+https://www.notion.so/Git-and-Version-Control-044df34bd3044bebb6bc798164f5bf2b?pvs=4
+
+### SQL Database
+
+https://www.notion.so/SQL-Database-688b4115b4dd41498f0a45e801293d79?pvs=4
+
 ### 相關查詢資源
 
 MDN (程式瑪搜尋)  
