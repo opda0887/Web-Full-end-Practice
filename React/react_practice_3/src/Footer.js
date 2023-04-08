@@ -1,11 +1,18 @@
 import React from "react";
+import Major from "./Major";
 
 const Footer = () => {
+  let majors = [
+    { name: "Basic Programming", score: 88, classes: 3 },
+    { name: "Physics", score: 92, classes: 3 },
+    { name: "Calculus", score: 84, classes: 4 },
+  ];
   return (
     <div>
-      <h4>To contact me: </h4>
-      <h6>Email: opda0887@gmail.com</h6>
-      <h6>Phone: 0970816390</h6>
+      <h3>My major: </h3>
+      {majors.map((m) => {
+        return <Major name={m.name} score={m.score} classes={m.classes} />;
+      })}
     </div>
   );
 };
