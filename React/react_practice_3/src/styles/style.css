@@ -11,4 +11,9 @@ button {
   color: rgb(61, 61, 61);
   padding: 4px 10px;
   cursor: pointer;
+}
+
+p.test {
+  color: purple;
+  background-color: aliceblue;
 }/*# sourceMappingURL=style.css.map */

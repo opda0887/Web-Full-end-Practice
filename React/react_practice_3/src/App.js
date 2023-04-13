@@ -24,6 +24,7 @@ const App = () => {
           </div>
         );
       })}
+      <p className="test">Yeah, thats all my majors...</p>
     </div>
   );
 };
