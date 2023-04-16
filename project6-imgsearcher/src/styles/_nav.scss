@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+$navbar-bg: #2a2f4f;
+$navbar-text: #e5beec;
+$navbar-text-hover: #917fb3;
+
+.igsch__nav-bar {
+  background-color: $navbar-bg;
+  ul {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 2rem;
+    li {
+      color: $navbar-text;
+      padding: 0.5rem 1rem;
+      a {
+        font-size: 1.5rem;
+        transition: all 0.25s ease;
+        &:hover {
+          color: $navbar-text-hover;
+        }
+      }
+    }
+  }
+}

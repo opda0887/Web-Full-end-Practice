@@ -1,0 +1,33 @@
+$searchbar-border-bottom: #917fb3;
+$searchbar-button-bg: #917fb3;
+$searchbar-button-text: #fde2f3;
+
+.igsch__mainpage-container_search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 0;
+  input[type="text"] {
+    width: 15rem;
+    font-size: 1.2rem;
+    background: none;
+    border: none;
+    border-bottom: 0.1rem solid $searchbar-border-bottom;
+    outline: none;
+  }
+  button {
+    font-size: 1.1rem;
+    background-color: $searchbar-button-bg;
+    color: $searchbar-button-text;
+    border: none;
+    border-radius: 4px;
+    margin-left: 0.3rem;
+    padding: 0.4rem 0.6rem;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    &:hover {
+      box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.2);
+      transition: all 0.25s ease;
+    }
+  }
+}

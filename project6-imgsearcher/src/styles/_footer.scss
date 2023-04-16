@@ -1,0 +1,15 @@
+$footer-text: #2a2f4f;
+$footer-bg: #917fb3;
+
+.igsch__footer-bar {
+  background: $footer-bg;
+  color: $footer-text;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  padding: 0.5rem 0;
+}

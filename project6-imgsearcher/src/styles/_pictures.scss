@@ -1,0 +1,51 @@
+$searchbar-button-bg: #2a2f4f;
+$searchbar-button-text: #fde2f3;
+
+.igsch__mainpage-container_pictures {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  .img-container {
+    padding: 1rem;
+    width: 400px;
+
+    .img-container_box {
+      overflow: hidden;
+      height: 40vh;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all 0.25s ease;
+        &:hover {
+          transform: scale(1.25);
+        }
+      }
+    }
+  }
+}
+
+.igsch__mainpage-container_loadMore {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+  button {
+    font-size: 1.7rem;
+    background-color: $searchbar-button-bg;
+    color: $searchbar-button-text;
+    border: none;
+    border-radius: 4px;
+    margin-left: 0.3rem;
+    padding: 0.5rem 1rem;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    &:hover {
+      box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.2);
+      transition: all 0.25s ease;
+    }
+  }
+}

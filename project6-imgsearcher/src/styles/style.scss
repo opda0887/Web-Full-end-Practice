@@ -1,8 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+$main-bg: #fde2f3;
+$selection-bg: orange;
+$selection-text: white;
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: $main-bg;
+}
+
+::selection {
+  color: $selection-text;
+  background: $selection-bg;
 }
 
 a {
@@ -13,3 +28,13 @@ a {
 ul {
   list-style-type: none;
 }
+
+.igsch__mainpage-container,
+.igsch__mainpage-container {
+  margin-bottom: 2rem;
+}
+
+@import "./nav";
+@import "./search";
+@import "./footer";
+@import "./pictures";
