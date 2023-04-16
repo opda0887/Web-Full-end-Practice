@@ -1,5 +1,7 @@
 $searchbar-button-bg: #2a2f4f;
 $searchbar-button-text: #fde2f3;
+$click-here-text: #917fb3;
+$click-here-text-hover: #2a2f4f;
 
 .igsch__mainpage-container_pictures {
   display: flex;
@@ -47,5 +49,18 @@ $searchbar-button-text: #fde2f3;
       box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.2);
       transition: all 0.25s ease;
     }
+  }
+}
+
+.photographer {
+  font-weight: 600;
+}
+
+.click_here {
+  color: $click-here-text;
+  text-decoration: underline;
+  transition: all 0.25s ease;
+  &:hover {
+    color: $click-here-text-hover;
   }
 }
